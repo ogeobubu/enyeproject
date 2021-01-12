@@ -7,6 +7,7 @@ import { Alert } from "react-bootstrap";
 function App() {
   return (
     <div className="container">
+      <Header />
       <Alert variant="success">
         <Alert.Heading>
           Hi there!👋 I appreciate you for checking this out
@@ -16,7 +17,6 @@ function App() {
           React-Bootstrap as the CSS library.
         </p>
       </Alert>
-      <Header />
       <Footer />
     </div>
   );
