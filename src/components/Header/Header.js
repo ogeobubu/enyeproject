@@ -6,11 +6,13 @@ import { Button, Form, FormControl, Container } from "react-bootstrap";
 import Profile from "../Profile/Profile";
 
 const Header = () => {
+  const [finalSearchTerm, setFinalSearchTerm] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+
   const clickSubmit = (e) => {
     e.preventDefault();
 
-    setSearchTerm(searchTerm);
+    setFinalSearchTerm(searchTerm);
   };
 
   return (
@@ -36,7 +38,7 @@ const Header = () => {
             </Button>
           </Form>
         </div>
-        <Profile searchTerm={searchTerm} />
+        <Profile setFinalSearchTerm={finalSearchTerm} />
       </Container>
     </header>
   );

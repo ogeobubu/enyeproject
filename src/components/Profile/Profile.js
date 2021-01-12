@@ -5,7 +5,7 @@ import { Alert } from "react-bootstrap";
 import User from "../User/User";
 import Pagination from "../Pagination/Pagination";
 
-const Profile = ({ searchTerm }) => {
+const Profile = ({ setFinalSearchTerm }) => {
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(20);
@@ -23,7 +23,7 @@ const Profile = ({ searchTerm }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [setFinalSearchTerm]);
 
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
