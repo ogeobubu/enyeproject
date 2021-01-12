@@ -81,11 +81,7 @@ const User = ({ users }) => {
           );
         })
       ) : (
-        <Spinner
-          style={{ width: "100px" }}
-          animation="border"
-          variant="secondary"
-        />
+        <h2 className="text-center text-info">Loading...</h2>
       )}
     </Row>
   );
