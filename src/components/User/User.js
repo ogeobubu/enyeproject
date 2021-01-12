@@ -81,9 +81,11 @@ const User = ({ users }) => {
           );
         })
       ) : (
-        <Spinner animation="border" role="status">
-          <span className="sr-only">Loading...</span>
-        </Spinner>
+        <Spinner
+          style={{ width: "100px" }}
+          animation="border"
+          variant="secondary"
+        />
       )}
     </Row>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Profile.css";
 
+import { Alert } from "react-bootstrap";
 import User from "../User/User";
 import Pagination from "../Pagination/Pagination";
 
@@ -32,6 +33,15 @@ const Profile = ({ searchTerm }) => {
 
   return (
     <div className="profile-container">
+      <Alert variant="success">
+        <Alert.Heading>
+          Hi there!👋 I appreciate you for checking this out
+        </Alert.Heading>
+        <p>
+          This is built using JavaScript to be precise React.js and
+          React-Bootstrap as the CSS library.
+        </p>
+      </Alert>
       <User key={users.UserName} users={currentUsers} />
       <Pagination
         usersPerPage={usersPerPage}
