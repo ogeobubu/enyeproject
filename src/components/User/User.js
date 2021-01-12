@@ -1,5 +1,5 @@
 import "./User.css";
-import { Card, Button, CardGroup, Row, Spinner } from "react-bootstrap";
+import { Card, Button, CardGroup, Row } from "react-bootstrap";
 import moment from "moment";
 
 const User = ({ users }) => {
