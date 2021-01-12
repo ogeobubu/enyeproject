@@ -1,5 +1,5 @@
 import "./User.css";
-import { Card, Button, CardGroup, Row } from "react-bootstrap";
+import { Card, Button, CardGroup, Row, Spinner } from "react-bootstrap";
 import moment from "moment";
 
 const User = ({ users }) => {
@@ -81,7 +81,9 @@ const User = ({ users }) => {
           );
         })
       ) : (
-        <h2>Loading...</h2>
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
       )}
     </Row>
   );
