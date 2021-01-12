@@ -1,0 +1,35 @@
+.header {
+  background: transparent;
+  padding-top: 1rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#colored {
+  color: orange;
+}
+
+form {
+  padding: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px #ccc solid !important;
+  border-radius: 1rem !important;
+  outline: none;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 573px) {
+  .header-container {
+    display: block;
+  }
+}

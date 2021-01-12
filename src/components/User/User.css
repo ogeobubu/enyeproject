@@ -1,0 +1,21 @@
+.card {
+  margin-top: 1rem;
+  width: 1236px !important;
+  height: fit-content;
+  text-align: left !important;
+}
+
+.pic-side {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+img {
+  width: 80px;
+  margin-top: 1rem;
+}
+
+i {
+  font-size: small;
+}
