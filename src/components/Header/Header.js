@@ -13,6 +13,7 @@ const Header = () => {
     e.preventDefault();
 
     setFinalSearchTerm(searchTerm);
+    setFinalSearchTerm("");
   };
 
   return (
