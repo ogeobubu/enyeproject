@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Profile.css";
 
-import { Alert, Button } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 import User from "../User/User";
 import Pagination from "../Pagination/Pagination";
 
