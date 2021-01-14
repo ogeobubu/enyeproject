@@ -28,7 +28,7 @@ const User = ({ users, finalSearch }) => {
           })
           .map((user) => {
             return (
-              <Card className="m-3 card">
+              <Card key={user.Email} className="m-3 card">
                 <CardGroup>
                   <Card.Body className="card-body">
                     <div className="pic-side">
