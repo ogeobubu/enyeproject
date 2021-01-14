@@ -80,6 +80,11 @@ const User = ({ users, finalSearch }) => {
                           <p>Credit Card Type 💳: {user.CreditCardType}</p>
                         </small>
                       </Card.Text>
+                      <Card.Text style={{ color: "#000000" }}>
+                        <small>
+                          <p>Credit Card Number 0️⃣: {user.CreditCardNumber}</p>
+                        </small>
+                      </Card.Text>
                     </div>
                     <Button
                       variant="warning"
