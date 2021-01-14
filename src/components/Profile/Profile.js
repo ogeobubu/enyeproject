@@ -11,9 +11,7 @@ const Profile = ({ finalSearch }) => {
   const [usersPerPage] = useState(20);
 
   const fetchData = () => {
-    fetch(
-      "https://cors-anywhere.herokuapp.com/http://api.enye.tech/v1/challenge/records"
-    )
+    fetch("http://api.enye.tech/v1/challenge/records")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -52,9 +50,6 @@ const Profile = ({ finalSearch }) => {
         totalUsers={users.length}
         paginate={paginate}
       />
-      {/* <Button variant="primary" onClick={filterSearch}>
-        Filter
-      </Button> */}
     </div>
   );
 };

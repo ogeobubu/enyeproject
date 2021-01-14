@@ -16,6 +16,9 @@ const User = ({ users, finalSearch }) => {
               ) ||
               userFilter.Gender.toLowerCase().includes(
                 finalSearch.toLowerCase()
+              ) ||
+              userFilter.PaymentMethod.toLowerCase().includes(
+                finalSearch.toLowerCase()
               )
             ) {
               return userFilter;
@@ -54,6 +57,11 @@ const User = ({ users, finalSearch }) => {
                             {user.FirstName} {user.LastName}
                           </strong>
                         </div>
+                      </Card.Text>
+                      <Card.Text style={{ color: "#000000" }}>
+                        <small>
+                          <p>Email 🧧: {user.Email}</p>
+                        </small>
                       </Card.Text>
                       <Card.Text style={{ color: "#000000" }}>
                         <small>

@@ -26,6 +26,13 @@ input {
   color: #ffffff !important;
 }
 
+.search-info {
+  background: #ffffff;
+  color: #000000;
+  float: right;
+  padding: 1rem;
+}
+
 /* MEDIA QUERY */
 
 @media screen and (max-width: 573px) {

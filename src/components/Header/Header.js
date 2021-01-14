@@ -16,16 +16,6 @@ const Header = () => {
     console.log(searchData);
   };
 
-  // const [finalSearchTerm, setFinalSearchTerm] = useState("");
-  // const [searchTerm, setSearchTerm] = useState("");
-
-  // const clickSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   setFinalSearchTerm(searchTerm);
-  //   setFinalSearchTerm("");
-  // };
-
   return (
     <header>
       <Container>
@@ -37,7 +27,7 @@ const Header = () => {
           <Form inline onSubmit={clickSubmit}>
             <FormControl
               type="text"
-              placeholder="Search"
+              placeholder="Search by Gender or Credit Card Type"
               className="mr-sm-2 form"
               value={searchData}
               onChange={(e) => {
