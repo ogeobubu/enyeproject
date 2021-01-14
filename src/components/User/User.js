@@ -22,6 +22,8 @@ const User = ({ users, finalSearch }) => {
               )
             ) {
               return userFilter;
+            } else {
+              return "";
             }
           })
           .map((user) => {
