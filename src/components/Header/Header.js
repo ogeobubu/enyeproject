@@ -6,15 +6,25 @@ import { Button, Form, FormControl, Container } from "react-bootstrap";
 import Profile from "../Profile/Profile";
 
 const Header = () => {
-  const [finalSearchTerm, setFinalSearchTerm] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchData, setSearchData] = useState("");
+  const [finalSearch, setFinalSearch] = useState("");
 
   const clickSubmit = (e) => {
     e.preventDefault();
 
-    setFinalSearchTerm(searchTerm);
-    setFinalSearchTerm("");
+    setFinalSearch(searchData);
+    console.log(searchData);
   };
+
+  // const [finalSearchTerm, setFinalSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
+
+  // const clickSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   setFinalSearchTerm(searchTerm);
+  //   setFinalSearchTerm("");
+  // };
 
   return (
     <header>
@@ -29,9 +39,9 @@ const Header = () => {
               type="text"
               placeholder="Search"
               className="mr-sm-2 form"
-              value={searchTerm}
+              value={searchData}
               onChange={(e) => {
-                setSearchTerm(e.target.value);
+                setSearchData(e.target.value);
               }}
             />
             <Button onClick={clickSubmit} variant="outline-warning">
@@ -39,7 +49,7 @@ const Header = () => {
             </Button>
           </Form>
         </div>
-        <Profile setFinalSearchTerm={finalSearchTerm} />
+        <Profile finalSearch={finalSearch} />
       </Container>
     </header>
   );

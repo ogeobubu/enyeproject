@@ -1,19 +1,17 @@
 import { useState, useEffect } from "react";
 import "./Profile.css";
 
-import { Alert } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import User from "../User/User";
 import Pagination from "../Pagination/Pagination";
 
-const Profile = ({ setFinalSearchTerm }) => {
+const Profile = ({ finalSearch }) => {
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(20);
 
   const fetchData = () => {
-    fetch(
-      "https://cors-anywhere.herokuapp.com/http://api.enye.tech/v1/challenge/records"
-    )
+    fetch("http://api.enye.tech/v1/challenge/records")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -23,7 +21,7 @@ const Profile = ({ setFinalSearchTerm }) => {
 
   useEffect(() => {
     fetchData();
-  }, [setFinalSearchTerm]);
+  }, [finalSearch]);
 
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
@@ -42,12 +40,19 @@ const Profile = ({ setFinalSearchTerm }) => {
           React-Bootstrap as the CSS library.
         </p>
       </Alert>
-      <User key={users.UserName} users={currentUsers} />
+      <User
+        key={users.UserName}
+        users={currentUsers}
+        finalSearch={finalSearch}
+      />
       <Pagination
         usersPerPage={usersPerPage}
         totalUsers={users.length}
         paginate={paginate}
       />
+      {/* <Button variant="primary" onClick={filterSearch}>
+        Filter
+      </Button> */}
     </div>
   );
 };

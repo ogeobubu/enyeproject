@@ -19,3 +19,9 @@ img {
 i {
   font-size: small;
 }
+
+@media (max-width: 1080px) {
+  .pic-side {
+    flex-direction: column;
+  }
+}
